@@ -3,3 +3,38 @@
     display: grid;
     grid-auto-columns: minmax(100px, auto);
 }
+
+.result {
+    background-color: #FBFBFB;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.result-text {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.tags {
+    color: white;
+    font-size: 0.65em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.tag {
+    background-color: olivedrab;
+    border-radius: 15px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 6px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: fit-content;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
