@@ -10,8 +10,8 @@ const albumColors = {
     "Sounds Of The Season: The Taylor Swift Holiday Collection": "red",
     "Fearless": "goldenrod",
     "Fearless (Taylor's Version)": "goldenrod",
-    "Speak Now": "mediumorchid",
-    "Speak Now (Taylor's Version)": "mediumorchid",
+    "Speak Now": "mediumpurple",
+    "Speak Now (Taylor's Version)": "mediumpurple",
     "Red": "firebrick",
     "Red (Taylor's Version)": "firebrick",
     "1989": "skyblue",
@@ -39,7 +39,6 @@ function findMatches(str) {
         console.log(album);
         for (const song in discography[album]) {
             const songMatches = song.match(regex);
-            var songSet = new Set();
 
             if (songMatches) {
                 songMatches.forEach(match => matches.add([album, song, match.trim()]));
@@ -80,7 +79,7 @@ function search() {
                 <div class="result-text">${output}</div>
                 <div class="tags">
                     <div class="tag" style="background-color: ${albumColor}">${song}</div>
-                    <div class="tag" style="background-color: ${albumColor}">${album}</div>
+                    <div class="tag" style="background-color: ${albumColor}"><i>${album}</i></div>
                 </div>
             </div>
             `
