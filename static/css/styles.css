@@ -24,17 +24,33 @@
     margin-top: 20px;
 }
 
-.tag {
-    background-color: olivedrab;
-    border-radius: 15px;
-    display: inline-block;
-    margin-right: 6px;
-    padding: 6px;
-    padding-left: 14px;
-    padding-right: 14px;
-    width: fit-content;
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+@media (max-width: 540px) {
+    .tag {
+        background-color: olivedrab;
+        border-radius: 15px;
+        display: inline-block;
+        margin-right: 6px;
+        padding: 6px;
+        padding-left: 14px;
+        padding-right: 14px;
+        width: fit-content;
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }
+
+@media (min-width: 541px) {
+    .tag {
+        background-color: olivedrab;
+        border-radius: 15px;
+        display: inline-block;
+        margin-right: 6px;
+        padding: 6px;
+        padding-left: 14px;
+        padding-right: 14px;
+        width: fit-content;
+    }
+}
+
