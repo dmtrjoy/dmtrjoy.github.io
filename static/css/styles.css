@@ -5,7 +5,7 @@
 }
 
 .result {
-    background-color: #FBFBFB;
+    background-color: #fbfbfbe7;
     border-radius: 20px;
     margin-bottom: 10px;
     padding: 20px;
@@ -28,12 +28,12 @@
     background-color: olivedrab;
     border-radius: 15px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 6px;
     padding: 6px;
     padding-left: 14px;
     padding-right: 14px;
     width: fit-content;
-    max-width: 200px;
+    max-width: 160px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
