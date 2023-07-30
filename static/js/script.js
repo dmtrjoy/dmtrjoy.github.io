@@ -46,17 +46,15 @@ function findMatches(str) {
             const lyrics = discography[album][song];
             const lyricsMatches = lyrics.match(regex);
             var lowerCaseLyricsSet = new Set();
-            var lyricsSet = new Set();
 
             if (lyricsMatches) {
                 for (const match of lyricsMatches) {
-                    const parsedMatch = match.trim().toLowerCase();
+                    const parsedMatch = match.trim().toLowerCase().replace(/\n/g, ' ');
                     if (!lowerCaseLyricsSet.has(parsedMatch)) {
                         lowerCaseLyricsSet.add(parsedMatch);
-                        lyricsSet.add(match);
+                        matches.add([album, song, match]);
                     }
                 }
-                lyricsSet.forEach(match => matches.add([album, song, match]));
             }
         }
     }
