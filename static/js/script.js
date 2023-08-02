@@ -23,10 +23,10 @@ const albumColors = {
 };
 
 function buildRegex(str) {
-    var regexStr = "(^|\\s|\\s')" + str[0] + "(\\S*)";
+    var regexStr = "(^|\\s|\\s'|\\s\"|\\s\\()" + str[0] + "(\\S*)";
     for (let i = 1; i < str.length; ++i) {
         c = str[i];
-        regexStr += "(\\s|\\s')" + c + "(\\S*)";
+        regexStr += "(\\s|\\s'|\\s\"|\\s\\()" + c + "(\\S*)";
     }
     return RegExp(regexStr, "gi");
 }
@@ -52,7 +52,7 @@ function findMatches(str) {
                     const parsedMatch = match.trim().toLowerCase().replace(/\n/g, ' ');
                     if (!lowerCaseLyricsSet.has(parsedMatch)) {
                         lowerCaseLyricsSet.add(parsedMatch);
-                        matches.add([album, song, match]);
+                        matches.add([album, song, match.trim().replace(/\n/g, "<br>")]);
                     }
                 }
             }
