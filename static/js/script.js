@@ -49,7 +49,9 @@ function findMatches(str) {
 
             if (lyricsMatches) {
                 for (const match of lyricsMatches) {
-                    const parsedMatch = match.trim().toLowerCase().replace(/\n/g, ' ');
+                    const parsedMatch = match.trim().toLowerCase()
+                        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+                        .replace(/\s{2,}/g, ' ');
                     if (!lowerCaseLyricsSet.has(parsedMatch)) {
                         lowerCaseLyricsSet.add(parsedMatch);
                         matches.add([album, song, match.trim().replace(/\n/g, "<br>")]);
